@@ -151,7 +151,6 @@ const parseTransform = new Transform({
 
     if (!result.success) {
       fs.appendFileSync(rootPath + '/errors.csv', await stringify([[brand, itemName]]));
-      return callback(new Error(`Not found: [${brand} ${itemName}]`));
     }
     console.log(result.success ? 'success'.green : 'error'.red, ++counter);
 
